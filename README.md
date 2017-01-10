@@ -36,3 +36,5 @@ ggplot (https://github.com/yhat/ggplot, might need to install manually on anacon
 	conda install -c conda-forge ggplot
 
 pandas
+
+pydot
