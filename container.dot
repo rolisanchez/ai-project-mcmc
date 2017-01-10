@@ -1,0 +1,9 @@
+digraph G {
+burglary_sensor;
+fire_sensor;
+p_alarmon [shape=invtriangle];
+fire_sensor -> p_alarmon  [label=fire_sensor];
+burglary_sensor -> p_alarmon  [label=burglary_sensor];
+alarmon [style=filled];
+p_alarmon -> alarmon  [label=p];
+}
