@@ -1,11 +1,19 @@
 digraph G {
-power_plant;
+cable_broke;
+nointernet [style=filled];
+p_nointernet [shape=invtriangle];
+p_nointernet -> nointernet  [label=p];
 nopower [style=filled];
+nopower -> p_nointernet  [label=nopower];
 p_nopower [shape=invtriangle];
 p_nopower -> nopower  [label=p];
 power_breaker;
 power_breaker -> p_nopower  [label=power_breaker];
+power_plant;
 power_plant -> p_nopower  [label=power_plant];
 power_maintenance;
 power_maintenance -> p_nopower  [label=power_maintenance];
+cable_broke -> p_nointernet  [label=cable_broke];
+isp_problem;
+isp_problem -> p_nointernet  [label=isp_problem];
 }
