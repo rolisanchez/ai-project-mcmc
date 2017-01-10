@@ -1,12 +1,12 @@
 digraph G {
+grass_wet [style=filled];
+p_grass_wet [shape=invtriangle];
+p_grass_wet -> grass_wet  [label=p];
 sprinkler;
+sprinkler -> p_grass_wet  [label=sprinkler];
 p_sprinkler [shape=invtriangle];
 p_sprinkler -> sprinkler  [label=p];
 rain;
 rain -> p_sprinkler  [label=rain];
-grass_wet [style=filled];
-p_grass_wet [shape=invtriangle];
-p_grass_wet -> grass_wet  [label=p];
-sprinkler -> p_grass_wet  [label=sprinkler];
 rain -> p_grass_wet  [label=rain];
 }
