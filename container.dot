@@ -1,9 +1,11 @@
 digraph G {
-burglary_sensor;
-fire_sensor;
-p_alarmon [shape=invtriangle];
-fire_sensor -> p_alarmon  [label=fire_sensor];
-burglary_sensor -> p_alarmon  [label=burglary_sensor];
-alarmon [style=filled];
-p_alarmon -> alarmon  [label=p];
+power_plant;
+nopower [style=filled];
+p_nopower [shape=invtriangle];
+p_nopower -> nopower  [label=p];
+power_breaker;
+power_breaker -> p_nopower  [label=power_breaker];
+power_plant -> p_nopower  [label=power_plant];
+power_maintenance;
+power_maintenance -> p_nopower  [label=power_maintenance];
 }
